@@ -13,11 +13,10 @@ void main(){
     for (q=0;q<r;q++){
         scanf("%d",&arr[q]);
     }
-    SelectionSort(arr,r);
-
-    
+    SelectionSortToAscending(arr,r);
+    SelectionSortToDescending(arr,r);
 }
-int SelectionSort(int arr[],int r){
+int SelectionSortToAscending(int arr[],int r){
     int i,j,temp,min,pivot;
     for (i=0;i<r-1;i++){
         min=arr[i];
@@ -34,9 +33,30 @@ int SelectionSort(int arr[],int r){
         arr[pivot]=temp;
     }
 
-    printf("After sorting The Array|||\n");
+    printf("After sorting The Array To Ascending Order :\n");
     for(i=0;i<r;i++){
         printf("%d ",arr[i]);
     }
-    getch();
+    
+}
+int SelectionSortToDescending(int arr[],int r){
+    int i,j,temp,min,pivot;
+    for (i=0;i<r-1;i++){
+        min=arr[i];
+        pivot=i;
+        for (j=i+1;j<r;j++){
+            if (min<arr[j]){
+                min=arr[j];
+                pivot=j;
+
+            }
+        }
+        temp=arr[i];
+        arr[i]=arr[pivot];
+        arr[pivot]=temp;
+    }
+    printf("\n After sorting The Array TO descending Order :\n");
+    for(i=0;i<r;i++){
+        printf("%d ",arr[i]);
+    }
 }
