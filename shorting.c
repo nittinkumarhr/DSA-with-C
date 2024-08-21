@@ -30,7 +30,7 @@ int SortingToAscending(int arr[100], int r){
     }
     printf("Sorted  Array:\n");
     for (i=0;i<r;i++){
-        printf("%d\n",arr[i]);
+        printf("%d",arr[i]);
     }
 }
 
@@ -49,6 +49,6 @@ int SortingToDescending(int arr[10],int r){
     }
     printf("Sorted  Array:\n");
     for (i=0;i<r;i++){
-        printf("%d\n",arr[i]);
+        printf("%d",arr[i]);
     }
 }
