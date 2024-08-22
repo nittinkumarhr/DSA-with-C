@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 void main(){
-    int arr[]={12,34,11,44,6,66,3,78};
+    int arr[]={};
     int r,q;
     printf("\nEnter the Arrange :");
     scanf("%d",&r);
