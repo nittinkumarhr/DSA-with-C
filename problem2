@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void SearchItem(int arr[], int s, int choice) {
+    int i, j, item;
+    if (choice == 1) {
+        printf("\n Enter the index Do you want To Search \n ");
+        scanf("%d", &item);
+        if (item >= s) {
+            printf("given Index Out of size  array %d \n ", item);
+        } else {
+            printf("Given Index Persent Element of the -  %d", arr[item]);
+        }
+    }
+    else{
+        printf("Enter the item do you want to Search \n");
+        scanf("%d ",&item);
+        for (i=0;i<s;i++){
+            if (arr[i]==item){
+                printf("Element is Present the Index of %d",i);
+                break;
+            }
+            else{
+                j=1;
+            }
+        }
+        if(j==1){
+            printf(" Element not Found %d",item);
+        }
+    }
+}
+
+int main() {
+    printf("--------------------- Problem 2 ---------------------------\n");
+    int s, choice;
+    printf("\n Enter the Array Size \n");
+    scanf("%d", &s);
+
+    
+    int* arr = (int*)malloc(s * sizeof(int));
+
+    printf(" \n Enter the Array Elements \n");
+    for (int i = 0; i < s; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("\n If you want to serach in  Array\n By Index -> Press 1 \n By Value Press 2\n ");
+    scanf("%d", &choice);
+
+    SearchItem(arr, s, choice);
+
+    free(arr);
+
+    return 0;
+}
